@@ -38,9 +38,9 @@ qstat -u $USER localgrid@cream02
 http://mon.iihe.ac.be/ganglia/addons/job_monarch/?c=Servers
 
 #Quando i job sono finiti
-/localgrid/$USER/directsubmissiontest/script.stdout
-/localgrid/$USER/directsubmissiontest/script.stderr
-/localgrid/$USER/directsubmissiontest/
+emacs /localgrid/$USER/directsubmissiontest/script.stdout
+emacs /localgrid/$USER/directsubmissiontest/script.stderr
+ls /localgrid/$USER/directsubmissiontest/
 ```
 
 
