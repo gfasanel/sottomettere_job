@@ -26,11 +26,9 @@ http://mon.iihe.ac.be/trac/t2b/wiki/localSubmission
 mkdir directsubmissiontest
 cd directsubmissiontest/
 emacs script.sh&
-pwd=$PWD
 source $VO_CMS_SW_DIR/cmsset_default.sh
 cd /localgrid/<USER NAME>/path/to/CMSSW_4_1_4/src/
 eval `scram runtime -sh`              
-cd $pwd
 
 mkdir /localgrid/$USER/directsubmissiontest
 qsub -q localgrid@cream02 -o script.stdout -e script.stderr script.sh
@@ -43,4 +41,9 @@ emacs /localgrid/$USER/directsubmissiontest/script.stderr
 ls /localgrid/$USER/directsubmissiontest/
 ```
 
+Per parallelizzare
+
+https://github.com/cms-analysis/flashgg/blob/master/MetaData/python/jobs_utils.py
+
+usando Parallel (?)
 
